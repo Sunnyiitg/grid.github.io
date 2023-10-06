@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Creator</title>
+    <link rel="icon" href="./jyoti5.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="left-panel">
+        <label for="imageInput"
+          ><i class="fas fa-image icon"></i>Choose an image:</label
+        >
+        <input type="file" id="imageInput" accept="image/*" />
+  
+        <label for="rows"><i class="fas fa-ruler icon"></i>Number of Rows:</label>
+        <input type="number" id="rows" value="10" />
+  
+        <label for="cols"
+          ><i class="fas fa-columns icon"></i>Number of Columns:</label
+        >
+        <input type="number" id="cols" value="10" />
+  
+        <label for="gridColor"
+          ><i class="fas fa-paint-brush icon"></i>Grid Color:</label
+        >
+        <input type="color" id="gridColor" value="#000000" />
+  
+        <label for="gridThickness"
+          ><i class="fas fa-sliders-h icon"></i>Grid Thickness:</label
+        >
+        <input type="range" id="gridThickness" min="1" max="10" value="1" />
+  
+        <label for="brightness"><i class="fas fa-sun icon"></i>Brightness:</label>
+        <input type="range" id="brightness" min="0" max="200" value="100" />
+  
+        <label for="contrast"><i class="fas fa-adjust icon"></i>Contrast:</label>
+        <input type="range" id="contrast" min="0" max="200" value="100" />
+  
+        <label for="saturation"
+          ><i class="fas fa-tint icon"></i>Saturation:</label
+        >
+        <input type="range" id="saturation" min="0" max="200" value="100" />
+  
+        <label for="opacity"><i class="fas fa-adjust icon"></i>Opacity:</label>
+        <input type="range" id="opacity" min="0" max="100" value="100" />
+  
+        <!-- Add Font Awesome icons to the buttons -->
+        <button onclick="applyChanges()">
+          <i class="fas fa-check icon"></i>Apply Changes
+        </button>
+        <button onclick="resetChanges()">
+          <i class="fas fa-undo icon"></i>Reset
+        </button>
+        <button onclick="downloadImage()">
+          <i class="fas fa-download icon"></i>Download Image
+        </button>
+      </div>
+
+
+    <canvas id="imageCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

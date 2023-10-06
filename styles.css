@@ -1,0 +1,84 @@
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    background: url(./bg.jpeg) center/cover; /* Adjusted background property */
+    flex-wrap: wrap;
+  }
+
+  /* Add a semi-transparent overlay for the fade effect */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(
+      255,
+      255,
+      255,
+      0
+    ); /* Adjust the alpha (last) value for transparency */
+    pointer-events: none; /* Allow interaction with elements behind the overlay */
+  }
+
+  #left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  canvas {
+    border: 2px solid #dfd7d7;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  input,
+  button {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #3a893e;
+  }
+
+  /* Add gap after icons */
+  .icon {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #left-panel {
+      margin-right: 0;
+      width: 80%;
+    }
+  }
